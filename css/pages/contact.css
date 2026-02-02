@@ -1,0 +1,352 @@
+/* ===================================
+   CONTACT PAGE STYLES
+   Academic Requirements: Box Model, :focus pseudo-class, Responsive layout
+   =================================== */
+
+/* ============ CONTACT HERO ============ */
+.contact-hero {
+    position: relative;
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl) 0;
+    overflow: hidden;
+    text-align: center;
+
+    /* Background with image and overlay */
+    background:
+        linear-gradient(135deg,
+            rgba(6, 182, 212, 0.05) 0%,
+            rgba(79, 70, 229, 0.05) 100%),
+        url('../../assets/images/hero-bg.png') center/cover no-repeat;
+}
+
+/* Blurred overlay for depth */
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-bg);
+    opacity: 0.6;
+    backdrop-filter: blur(20px);
+    z-index: 0;
+}
+
+.contact-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============ CONTACT SECTION ============ */
+.contact-section {
+    padding: var(--space-2xl) 0;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xl);
+    justify-content: center;
+}
+
+/* ============ CONTACT INFORMATION ============ */
+.contact-info {
+    flex: 1 1 350px;
+}
+
+.contact-info-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-md);
+}
+
+.contact-info-description {
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-xl);
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-xl);
+    border: var(--border-width) solid var(--color-border);
+    transition: all var(--transition-fast);
+}
+
+.contact-method:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-2xl);
+    flex-shrink: 0;
+}
+
+.contact-method:nth-child(2) .contact-icon {
+    background: var(--gradient-accent);
+}
+
+.contact-method:nth-child(3) .contact-icon {
+    background: linear-gradient(135deg, var(--color-accent-purple) 0%, var(--color-accent-pink) 100%);
+}
+
+.contact-method-content {
+    flex: 1;
+}
+
+.contact-method-label {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.contact-method-value {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+}
+
+/* ============ CONTACT FORM ============ */
+/* Academic Requirements: Box Model (padding, margin, border), :focus pseudo-class */
+
+.contact-form-container {
+    flex: 1 1 450px;
+    max-width: 600px;
+}
+
+.contact-form {
+    background: var(--color-bg-alt);
+    padding: var(--space-lg);
+    border-radius: var(--radius-2xl);
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow-xl);
+}
+
+.form-group {
+    /* Box Model demonstration: margin-bottom for spacing */
+    margin-bottom: var(--space-md);
+}
+
+.form-label {
+    display: block;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    /* Box Model: margin-bottom */
+    margin-bottom: var(--space-xs);
+    font-size: var(--font-size-base);
+}
+
+.form-label span {
+    color: var(--color-error);
+}
+
+.form-input,
+.form-textarea {
+    /* Box Model: width, padding, border, border-radius */
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: var(--border-width-thick) solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    font-family: var(--font-primary);
+
+    /* Transition for smooth state changes */
+    transition: all var(--transition-fast);
+}
+
+.form-input {
+    height: 48px;
+}
+
+.form-textarea {
+    /* Box Model: height */
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Pseudo-class :focus - input focus state */
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    background: var(--color-bg-alt);
+}
+
+/* Pseudo-class :hover */
+.form-input:hover,
+.form-textarea:hover {
+    border-color: var(--color-primary);
+}
+
+/* Invalid state styling (validation-ready) */
+.form-input:invalid:not(:placeholder-shown),
+.form-textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--color-error);
+}
+
+.form-input:invalid:not(:placeholder-shown):focus,
+.form-textarea:invalid:not(:placeholder-shown):focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Valid state styling */
+.form-input:valid:not(:placeholder-shown),
+.form-textarea:valid:not(:placeholder-shown) {
+    border-color: var(--color-success);
+}
+
+.form-row {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.form-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--color-primary);
+}
+
+.form-checkbox-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.form-submit {
+    /* Box Model: width, padding */
+    width: 100%;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--gradient-primary);
+    color: white;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+/* Pseudo-class :hover - button hover effect */
+.form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Pseudo-class :focus */
+.form-submit:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Pseudo-class :active */
+.form-submit:active {
+    transform: translateY(0);
+}
+
+.form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-success {
+    padding: var(--space-md);
+    background: rgba(16, 185, 129, 0.1);
+    border: var(--border-width) solid var(--color-success);
+    border-radius: var(--radius-lg);
+    color: var(--color-success);
+    text-align: center;
+    margin-top: var(--space-md);
+    display: none;
+}
+
+.form-success.show {
+    display: block;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+
+
+/* ============ RESPONSIVE DESIGN ============ */
+/* Academic Requirement: Media Queries */
+
+@media (max-width: 767px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form-container {
+        flex: 1 1 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contact-container {
+        gap: var(--space-xl);
+    }
+}
+
+/* Desktop layout - side by side */
+@media (min-width: 1024px) {
+    .contact-container {
+        gap: var(--space-2xl);
+    }
+
+    .contact-info {
+        flex: 0 1 350px;
+    }
+
+    .contact-form-container {
+        flex: 1 1 500px;
+        max-width: 550px;
+    }
+}
