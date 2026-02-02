@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Modern personal portfolio showcasing creative projects, skills, and professional experience. Explore my work and get in touch.">
+  <meta name="keywords" content="portfolio, web developer, designer, projects, creative">
+  <meta name="author" content="Your Name">
+
+  <!-- SEO: Title Tag -->
+  <title>Home - Creative Portfolio | Modern Web Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+
+<body>
+  <!-- Loader Animation -->
+  <div class="loader-container" id="loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">Shrey Portfolio</a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div class="navbar-menu" id="navbarMenu">
+        <a href="index.html" class="navbar-link active">Home</a>
+        <a href="about.html" class="navbar-link">About</a>
+        <a href="projects.html" class="navbar-link">Projects</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">👋 Welcome to my portfolio</span>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Shrey</span><br>
+          Creative Web Developer & Designer
+        </h1>
+        <p class="hero-description">
+          I craft beautiful, modern, and innovative digital experiences that combine stunning design with powerful
+          functionality. Let's build something amazing together.
+        </p>
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn btn-primary">View My Work</a>
+          <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Cards Section -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What I Do</h2>
+        <p class="section-description">
+          I specialize in creating innovative digital solutions that make a difference
+        </p>
+      </div>
+
+      <div class="cards-container">
+        <!-- Card 1 - with absolute positioned badge -->
+        <article class="feature-card">
+          <span class="card-badge">Featured</span>
+          <div class="card-icon">💻</div>
+          <h3 class="card-title">Web Development</h3>
+          <p class="card-description">
+            Building responsive, modern websites with clean code and beautiful UI. Specialized in HTML, CSS, and
+            JavaScript.
+          </p>
+          <a href="projects.html" class="card-link">
+            View Projects <span>→</span>
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="feature-card">
+          <span class="card-badge">Popular</span>
+          <div class="card-icon">🎨</div>
+          <h3 class="card-title">UI/UX Design</h3>
+          <p class="card-description">
+            Creating stunning user interfaces with focus on usability, accessibility, and modern design trends.
+          </p>
+          <a href="projects.html" class="card-link">
+            View Designs <span>→</span>
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="feature-card">
+          <span class="card-badge">New</span>
+          <div class="card-icon">⚡</div>
+          <h3 class="card-title">Performance</h3>
+          <p class="card-description">
+            Optimizing websites for speed, SEO, and user experience. Every millisecond matters.
+          </p>
+          <a href="about.html" class="card-link">
+            Learn More <span>→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">30+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Satisfaction Rate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <!-- About Column -->
+        <div class="footer-column">
+          <h3 class="footer-column-title">About</h3>
+          <p class="footer-about-text">
+            I'm a passionate developer and designer creating beautiful digital experiences. Let's build something
+            amazing together.
+          </p>
+          <div class="footer-social">
+            <a href="https://github.com" class="social-link" aria-label="GitHub" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" class="social-link" aria-label="LinkedIn" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://dribbble.com" class="social-link" aria-label="Dribbble" target="_blank">
+              <i class="fab fa-dribbble"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-column">
+          <h3 class="footer-column-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Me</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3 class="footer-column-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Responsive Design</a></li>
+            <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Performance Optimization</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="footer-column">
+          <h3 class="footer-column-title">Get In Touch</h3>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="shreyrai69@gmail.com">shreyrai69@gmail.com</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+91 1234567890`">+91 1234567890</a>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Jalandhar, Punjab</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 <a href="index.html">Shrey Rai</a>. All rights reserved.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+
+</html>
